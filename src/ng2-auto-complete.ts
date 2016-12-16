@@ -19,7 +19,7 @@ export class Ng2AutoComplete {
   filter(list: any[], keyword: string) {
     return list.filter(
       el => {
-        return !!JSON.stringify(el).match(new RegExp(keyword, "i"));
+        return !!JSON.stringify(el).match(new RegExp('(^"|\\s)' + keyword, "i"));
       }
     );
   }

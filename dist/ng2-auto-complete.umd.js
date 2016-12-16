@@ -92,7 +92,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    Ng2AutoComplete.prototype.filter = function (list, keyword) {
 	        return list.filter(function (el) {
-	            return !!JSON.stringify(el).match(new RegExp(keyword, "i"));
+	            return !!JSON.stringify(el).match(new RegExp('(^"|\\s)' + keyword, "i"));
 	        });
 	    };
 	    /**
