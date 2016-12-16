@@ -12,7 +12,7 @@ var Ng2AutoComplete = (function () {
     }
     Ng2AutoComplete.prototype.filter = function (list, keyword) {
         return list.filter(function (el) {
-            return !!JSON.stringify(el).match(new RegExp('(^"|\\s)' + keyword, "i"));
+            return !!JSON.stringify(el).match(new RegExp('(^\"|\\s)' + keyword, "i"));
         });
     };
     /**
